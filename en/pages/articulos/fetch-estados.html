@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Consuming an API: loading, data and errors | Luis Bravo</title>
+    <meta
+      name="description"
+      content="A fetch request is not finished when JSON arrives: the interface also needs to explain what is happening."
+    />
+    <meta name="author" content="Luis Alejandro Bravo Bello" />
+    <meta name="theme-color" content="#faf9f6" />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Luis Bravo · Portfolio" />
+    <meta
+      property="og:title"
+      content="Consuming an API: loading, data and errors | Luis Bravo"
+    />
+    <meta
+      property="og:description"
+      content="A fetch request is not finished when JSON arrives: the interface also needs to explain what is happening."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="../../../images/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../assets/style.css" />
+    <script type="module" src="../../../js/app.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Luis Alejandro Bravo Bello",
+        "jobTitle": "Software developer",
+        "email": "mailto:luisbravobello@gmail.com",
+        "sameAs": [
+          "https://github.com/luisbravobello",
+          "https://www.linkedin.com/in/luis-alejandro-bravo-bello-94606535a/"
+        ],
+        "description": "Software Engineering student at Universidad Central del Este. Web development, C#, .NET and SQL."
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Consuming an API: loading, data and errors | Luis Bravo",
+        "description": "A fetch request is not finished when JSON arrives: the interface also needs to explain what is happening.",
+        "inLanguage": "en",
+        "author": { "@type": "Person", "name": "Luis Alejandro Bravo Bello" },
+        "datePublished": "2026-10-07"
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Skip to content</a>
+    <header class="site-header">
+      <nav class="container navigation" aria-label="Main navigation">
+        <a class="brand" href="../../index.html" aria-label="Luis Bravo, home"
+          ><span class="monogram">lb<span>.</span></span
+          ><span class="brand-name">LUIS BRAVO<span>DEVELOPER</span></span></a
+        >
+        <ul class="nav-links" id="menu">
+          <li><a href="../../index.html#proyectos">Projects</a></li>
+          <li><a href="../../index.html#sobre-mi">About me</a></li>
+          <li><a href="../articulos.html">Articles</a></li>
+          <li><a href="../cv.html">CV</a></li>
+          <li><a href="../certificados.html">Certificates</a></li>
+          <li>
+            <a class="nav-contact" href="../../index.html#contacto"
+              >Let's talk
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M7 17 17 7M7 7h10v10"></path></svg
+            ></a>
+          </li>
+        </ul>
+        <details class="language-menu">
+          <summary aria-label="Choose language">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="9"></circle>
+              <ellipse cx="12" cy="12" rx="4" ry="9"></ellipse>
+              <path d="M3 12h18"></path>
+            </svg>
+            EN
+          </summary>
+          <ul>
+            <li>
+              <a
+                href="../../../pages/articulos/fetch-estados.html"
+                lang="es"
+                hreflang="es"
+                >Español
+              </a>
+            </li>
+            <li>
+              <a
+                href="fetch-estados.html"
+                lang="en"
+                hreflang="en"
+                aria-current="page"
+                >English <span aria-hidden="true">✓</span></a
+              >
+            </li>
+          </ul>
+        </details>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="menu"
+        >
+          <span></span><span></span>
+        </button>
+      </nav>
+    </header>
+    <main id="contenido">
+      <article class="technical-article">
+        <header class="container article-hero">
+          <nav class="breadcrumbs" aria-label="Breadcrumb navigation">
+            <a href="../articulos.html">All articles</a
+            ><span aria-hidden="true">/</span><span>APIs</span>
+          </nav>
+          <p class="eyebrow">APIs / DEVELOPMENT NOTES</p>
+          <h1>Consuming an API: loading, data and errors</h1>
+          <p class="article-deck">
+            A fetch request is not finished when JSON arrives: the interface
+            also needs to explain what is happening.
+          </p>
+          <p class="article-byline">
+            Luis Alejandro Bravo Bello <span>·</span>
+            <time datetime="2026-10-07">October 7, 2026</time>
+          </p>
+        </header>
+        <section class="container reading-layout" aria-label="Article content">
+          <aside class="article-toc">
+            <nav aria-label="In this article">
+              <p class="eyebrow">In this article</p>
+              <ol>
+                <li>
+                  <a href="#apartado-1"
+                    >Think about states before the request</a
+                  >
+                </li>
+                <li><a href="#apartado-2">Check the response</a></li>
+                <li><a href="#apartado-3">Update a simple interface</a></li>
+                <li>
+                  <a href="#apartado-4">What a fuller interface still needs</a>
+                </li>
+              </ol>
+            </nav>
+          </aside>
+          <section class="article-body" aria-label="Explanation and examples">
+            <section id="apartado-1">
+              <h2>Think about states before the request</h2>
+              <p>
+                PokéAtlas requests data that is not included in the HTML.
+                Between clicking a button and receiving a response, there may be
+                a wait, a connection error or a missing resource.
+              </p>
+              <p>
+                An interface needs to distinguish initial, loading, result and
+                error states. Loading feedback explains the wait; error feedback
+                should help people understand and try again.
+              </p>
+            </section>
+            <section id="apartado-2">
+              <h2>Check the response</h2>
+              <figure class="code-example">
+                <figcaption>Minimal PokéAPI request</figcaption>
+                <pre tabindex="0"><code>async function getPokemon(name) {
+  const identifier = encodeURIComponent(name.trim().toLowerCase());
+  const response = await fetch(
+    'https://pokeapi.co/api/v2/pokemon/' + identifier
+  );
+  if (!response.ok) {
+    throw new Error('HTTP ' + response.status);
+  }
+  return response.json();
+}</code></pre>
+              </figure>
+              <p>
+                <code>fetch</code> does not automatically reject the promise for
+                an HTTP 404. That's why I check <code>response.ok</code> before
+                parsing the JSON.
+              </p>
+            </section>
+            <section id="apartado-3">
+              <h2>Update a simple interface</h2>
+              <figure class="code-example">
+                <figcaption>HTML</figcaption>
+                <pre
+                  tabindex="0"
+                ><code>&lt;p id="status" role="status"&gt;&lt;/p&gt;
+&lt;p id="result"&gt;&lt;/p&gt;</code></pre>
+              </figure>
+              <figure class="code-example">
+                <figcaption>JavaScript</figcaption>
+                <pre
+                  tabindex="0"
+                ><code>const status = document.querySelector('#status');
+const result = document.querySelector('#result');
+
+async function showPokemon(name) {
+  status.textContent = 'Loading...';
+  result.textContent = '';
+  try {
+    const pokemon = await getPokemon(name);
+    result.textContent = pokemon.name;
+    status.textContent = 'Result available.';
+  } catch (error) {
+    status.textContent = 'Unable to load. Please try again.';
+  }
+}
+
+showPokemon('pikachu');</code></pre>
+              </figure>
+            </section>
+            <section id="apartado-4">
+              <h2>What a fuller interface still needs</h2>
+              <p>
+                If people can run several searches in succession, manage
+                outdated responses; you can cancel a previous request with
+                <code>AbortController</code>. Also validate the field,
+                distinguish errors and handle missing images.
+              </p>
+              <p>
+                I use <code>textContent</code> to display the name as text. This
+                example does not cover every production case. The Pikachu
+                endpoint was checked when preparing this article.
+              </p>
+            </section>
+            <aside class="article-sources">
+              <h2>Sources and references</h2>
+              <ul>
+                <li>
+                  <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch"
+                    >MDN: Using Fetch
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M7 17 17 7M7 7h10v10"></path></svg
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://pokeapi.co/docs/v2#pokemon"
+                    >PokéAPI: Pokémon endpoint
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M7 17 17 7M7 7h10v10"></path></svg
+                  ></a>
+                </li>
+              </ul>
+              <a class="text-link" href="../pokeatlas.html"
+                >View the related project
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M7 17 17 7M7 7h10v10"></path></svg
+              ></a>
+            </aside>
+          </section>
+        </section>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <section class="container footer-grid" aria-label="Portfolio links">
+        <a class="footer-brand" href="../../index.html"
+          >Luis Bravo<span>Web development with purpose.</span></a
+        >
+        <nav aria-label="Professional networks">
+          <a href="https://github.com/luisbravobello"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M9 19c-4 1-4-2-6-2m12 5v-4a3.5 3.5 0 0 0-1-3c3-.3 6-1.5 6-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.2-.4-3.6 1.3a12.3 12.3 0 0 0-6 0C6.6 2.2 5.4 2.6 5.4 2.6a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9c0 4.5 3 5.7 6 6a3.5 3.5 0 0 0-1 3v4"
+              ></path>
+            </svg>
+            GitHub</a
+          ><a
+            href="https://www.linkedin.com/in/luis-alejandro-bravo-bello-94606535a/"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+              <path d="M7 10v7m4 0v-7m0 3c0-4 6-4 6 0v4M7 7h.01"></path>
+            </svg>
+            LinkedIn</a
+          ><a href="mailto:luisbravobello@gmail.com"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+              <path d="m3 7 9 6 9-6"></path>
+            </svg>
+            Email</a
+          >
+          <a href="../cv.html">CV</a><a href="../articulos.html">Articles</a
+          ><a href="../certificados.html">Certificates</a>
+        </nav>
+        <p>© 2026 Luis Alejandro Bravo Bello<br />Dominican Republic</p>
+      </section>
+    </footer>
+  </body>
+</html>

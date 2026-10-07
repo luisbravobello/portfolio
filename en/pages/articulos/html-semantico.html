@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Semantic HTML: structure before style | Luis Bravo</title>
+    <meta
+      name="description"
+      content="Choose elements that explain your content and build navigation people can understand."
+    />
+    <meta name="author" content="Luis Alejandro Bravo Bello" />
+    <meta name="theme-color" content="#faf9f6" />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Luis Bravo · Portfolio" />
+    <meta
+      property="og:title"
+      content="Semantic HTML: structure before style | Luis Bravo"
+    />
+    <meta
+      property="og:description"
+      content="Choose elements that explain your content and build navigation people can understand."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="../../../images/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../assets/style.css" />
+    <script type="module" src="../../../js/app.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Luis Alejandro Bravo Bello",
+        "jobTitle": "Software developer",
+        "email": "mailto:luisbravobello@gmail.com",
+        "sameAs": [
+          "https://github.com/luisbravobello",
+          "https://www.linkedin.com/in/luis-alejandro-bravo-bello-94606535a/"
+        ],
+        "description": "Software Engineering student at Universidad Central del Este. Web development, C#, .NET and SQL."
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Semantic HTML: structure before style | Luis Bravo",
+        "description": "Choose elements that explain your content and build navigation people can understand.",
+        "inLanguage": "en",
+        "author": { "@type": "Person", "name": "Luis Alejandro Bravo Bello" },
+        "datePublished": "2026-10-07"
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Skip to content</a>
+    <header class="site-header">
+      <nav class="container navigation" aria-label="Main navigation">
+        <a class="brand" href="../../index.html" aria-label="Luis Bravo, home"
+          ><span class="monogram">lb<span>.</span></span
+          ><span class="brand-name">LUIS BRAVO<span>DEVELOPER</span></span></a
+        >
+        <ul class="nav-links" id="menu">
+          <li><a href="../../index.html#proyectos">Projects</a></li>
+          <li><a href="../../index.html#sobre-mi">About me</a></li>
+          <li><a href="../articulos.html">Articles</a></li>
+          <li><a href="../cv.html">CV</a></li>
+          <li><a href="../certificados.html">Certificates</a></li>
+          <li>
+            <a class="nav-contact" href="../../index.html#contacto"
+              >Let's talk
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M7 17 17 7M7 7h10v10"></path></svg
+            ></a>
+          </li>
+        </ul>
+        <details class="language-menu">
+          <summary aria-label="Choose language">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="9"></circle>
+              <ellipse cx="12" cy="12" rx="4" ry="9"></ellipse>
+              <path d="M3 12h18"></path>
+            </svg>
+            EN
+          </summary>
+          <ul>
+            <li>
+              <a
+                href="../../../pages/articulos/html-semantico.html"
+                lang="es"
+                hreflang="es"
+                >Español
+              </a>
+            </li>
+            <li>
+              <a
+                href="html-semantico.html"
+                lang="en"
+                hreflang="en"
+                aria-current="page"
+                >English <span aria-hidden="true">✓</span></a
+              >
+            </li>
+          </ul>
+        </details>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="menu"
+        >
+          <span></span><span></span>
+        </button>
+      </nav>
+    </header>
+    <main id="contenido">
+      <article class="technical-article">
+        <header class="container article-hero">
+          <nav class="breadcrumbs" aria-label="Breadcrumb navigation">
+            <a href="../articulos.html">All articles</a
+            ><span aria-hidden="true">/</span><span>HTML</span>
+          </nav>
+          <p class="eyebrow">HTML / DEVELOPMENT NOTES</p>
+          <h1>Semantic HTML: structure before style</h1>
+          <p class="article-deck">
+            Choose elements that explain your content and build navigation
+            people can understand.
+          </p>
+          <p class="article-byline">
+            Luis Alejandro Bravo Bello <span>·</span>
+            <time datetime="2026-10-07">October 7, 2026</time>
+          </p>
+        </header>
+        <section class="container reading-layout" aria-label="Article content">
+          <aside class="article-toc">
+            <nav aria-label="In this article">
+              <p class="eyebrow">In this article</p>
+              <ol>
+                <li><a href="#apartado-1">Content has a purpose</a></li>
+                <li><a href="#apartado-2">A small, organized document</a></li>
+                <li><a href="#apartado-3">Choose elements by meaning</a></li>
+                <li><a href="#apartado-4">A practical check</a></li>
+              </ol>
+            </nav>
+          </aside>
+          <section class="article-body" aria-label="Explanation and examples">
+            <section id="apartado-1">
+              <h2>Content has a purpose</h2>
+              <p>
+                Before choosing colors or sizes, ask what each part of a page
+                represents. A header introduces the site, navigation groups
+                links, and the main content serves the visitor's purpose.
+              </p>
+              <p>
+                In FULL TIME, services, questions and contact information have
+                different goals. Clear structure helps people read the page and
+                navigate it with assistive tools.
+              </p>
+            </section>
+            <section id="apartado-2">
+              <h2>A small, organized document</h2>
+              <figure class="code-example">
+                <figcaption>HTML · minimal structure</figcaption>
+                <pre tabindex="0"><code>&lt;header&gt;
+  &lt;nav aria-label="Main navigation"&gt;
+    &lt;a href="#services"&gt;Services&lt;/a&gt;
+    &lt;a href="#contact"&gt;Contact&lt;/a&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+&lt;main&gt;
+  &lt;h1&gt;Laundry and tailoring&lt;/h1&gt;
+  &lt;section id="services" aria-labelledby="services-title"&gt;
+    &lt;h2 id="services-title"&gt;Our services&lt;/h2&gt;
+    &lt;p&gt;Information about laundry and alterations.&lt;/p&gt;
+  &lt;/section&gt;
+  &lt;section id="contact" aria-labelledby="contact-title"&gt;
+    &lt;h2 id="contact-title"&gt;Contact&lt;/h2&gt;
+    &lt;a href="mailto:business@example.com"&gt;Email the business&lt;/a&gt;
+  &lt;/section&gt;
+&lt;/main&gt;
+&lt;footer&gt;&lt;p&gt;Business information&lt;/p&gt;&lt;/footer&gt;</code></pre>
+              </figure>
+            </section>
+            <section id="apartado-3">
+              <h2>Choose elements by meaning</h2>
+              <ul>
+                <li>
+                  <code>main</code> contains the main content; these pages use
+                  one.
+                </li>
+                <li>
+                  <code>section</code> groups a topic and usually has a heading.
+                </li>
+                <li>
+                  <code>article</code> represents a self-contained piece, such
+                  as this article or a project card.
+                </li>
+                <li>
+                  <code>div</code> is still useful when you only need a layout
+                  container.
+                </li>
+              </ul>
+              <p>
+                Headings describe organization. You don't choose an
+                <code>h2</code> because it “looks smaller”: CSS defines its
+                size.
+              </p>
+            </section>
+            <section id="apartado-4">
+              <h2>A practical check</h2>
+              <p>
+                Read the page without styles. Does the order make sense? Do the
+                links explain their destinations? Then navigate with a keyboard
+                and check that focus is visible.
+              </p>
+              <p>
+                Semantics help describe content, but they don't replace useful
+                writing, accessibility or SEO review. Avoid turning every visual
+                container into a section without a real topic.
+              </p>
+            </section>
+            <aside class="article-sources">
+              <h2>Sources and references</h2>
+              <ul>
+                <li>
+                  <a href="https://www.w3.org/WAI/tutorials/page-structure/"
+                    >W3C WAI: Page Structure
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M7 17 17 7M7 7h10v10"></path></svg
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://html.spec.whatwg.org/multipage/sections.html"
+                    >WHATWG: Sections
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M7 17 17 7M7 7h10v10"></path></svg
+                  ></a>
+                </li>
+              </ul>
+              <a class="text-link" href="../full-time.html"
+                >View the related project
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M7 17 17 7M7 7h10v10"></path></svg
+              ></a>
+            </aside>
+          </section>
+        </section>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <section class="container footer-grid" aria-label="Portfolio links">
+        <a class="footer-brand" href="../../index.html"
+          >Luis Bravo<span>Web development with purpose.</span></a
+        >
+        <nav aria-label="Professional networks">
+          <a href="https://github.com/luisbravobello"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M9 19c-4 1-4-2-6-2m12 5v-4a3.5 3.5 0 0 0-1-3c3-.3 6-1.5 6-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.2-.4-3.6 1.3a12.3 12.3 0 0 0-6 0C6.6 2.2 5.4 2.6 5.4 2.6a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9c0 4.5 3 5.7 6 6a3.5 3.5 0 0 0-1 3v4"
+              ></path>
+            </svg>
+            GitHub</a
+          ><a
+            href="https://www.linkedin.com/in/luis-alejandro-bravo-bello-94606535a/"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+              <path d="M7 10v7m4 0v-7m0 3c0-4 6-4 6 0v4M7 7h.01"></path>
+            </svg>
+            LinkedIn</a
+          ><a href="mailto:luisbravobello@gmail.com"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+              <path d="m3 7 9 6 9-6"></path>
+            </svg>
+            Email</a
+          >
+          <a href="../cv.html">CV</a><a href="../articulos.html">Articles</a
+          ><a href="../certificados.html">Certificates</a>
+        </nav>
+        <p>© 2026 Luis Alejandro Bravo Bello<br />Dominican Republic</p>
+      </section>
+    </footer>
+  </body>
+</html>

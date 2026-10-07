@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      JavaScript por responsabilidades, no por cantidad de archivos | Luis Bravo
+    </title>
+    <meta
+      name="description"
+      content="Un punto de partida para separar navegación, filtros y contacto sin complicar una web pequeña."
+    />
+    <meta name="author" content="Luis Alejandro Bravo Bello" />
+    <meta name="theme-color" content="#faf9f6" />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="es_DO" />
+    <meta property="og:site_name" content="Luis Bravo · Portafolio" />
+    <meta
+      property="og:title"
+      content="JavaScript por responsabilidades, no por cantidad de archivos | Luis Bravo"
+    />
+    <meta
+      property="og:description"
+      content="Un punto de partida para separar navegación, filtros y contacto sin complicar una web pequeña."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="../../images/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../assets/style.css" />
+    <script type="module" src="../../js/app.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Luis Alejandro Bravo Bello",
+        "jobTitle": "Desarrollador de software",
+        "email": "mailto:luisbravobello@gmail.com",
+        "sameAs": [
+          "https://github.com/luisbravobello",
+          "https://www.linkedin.com/in/luis-alejandro-bravo-bello-94606535a/"
+        ],
+        "description": "Estudiante de Ingeniería de Software en la Universidad Central del Este. Desarrollo web, C#, .NET y SQL."
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "JavaScript por responsabilidades, no por cantidad de archivos | Luis Bravo",
+        "description": "Un punto de partida para separar navegación, filtros y contacto sin complicar una web pequeña.",
+        "inLanguage": "es",
+        "author": { "@type": "Person", "name": "Luis Alejandro Bravo Bello" },
+        "datePublished": "2026-10-07"
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+      <nav class="container navigation" aria-label="Navegación principal">
+        <a class="brand" href="../../index.html" aria-label="Luis Bravo, inicio"
+          ><span class="monogram">lb<span>.</span></span
+          ><span class="brand-name"
+            >LUIS BRAVO<span>DESARROLLADOR</span></span
+          ></a
+        >
+        <ul class="nav-links" id="menu">
+          <li><a href="../../index.html#proyectos">Proyectos</a></li>
+          <li><a href="../../index.html#sobre-mi">Sobre mí</a></li>
+          <li><a href="../articulos.html">Artículos</a></li>
+          <li><a href="../cv.html">CV</a></li>
+          <li><a href="../certificados.html">Certificados</a></li>
+          <li>
+            <a class="nav-contact" href="../../index.html#contacto"
+              >Hablemos
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M7 17 17 7M7 7h10v10"></path></svg
+            ></a>
+          </li>
+        </ul>
+        <details class="language-menu">
+          <summary aria-label="Elegir idioma">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="9"></circle>
+              <ellipse cx="12" cy="12" rx="4" ry="9"></ellipse>
+              <path d="M3 12h18"></path>
+            </svg>
+            ES
+          </summary>
+          <ul>
+            <li>
+              <a
+                href="javascript-modular.html"
+                lang="es"
+                hreflang="es"
+                aria-current="page"
+                >Español <span aria-hidden="true">✓</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="../../en/pages/articulos/javascript-modular.html"
+                lang="en"
+                hreflang="en"
+                >English
+              </a>
+            </li>
+          </ul>
+        </details>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          aria-controls="menu"
+        >
+          <span></span><span></span>
+        </button>
+      </nav>
+    </header>
+    <main id="contenido">
+      <article class="technical-article">
+        <header class="container article-hero">
+          <nav class="breadcrumbs" aria-label="Ruta de navegación">
+            <a href="../articulos.html">Todos los artículos</a
+            ><span aria-hidden="true">/</span><span>JavaScript</span>
+          </nav>
+          <p class="eyebrow">JavaScript / NOTAS DE DESARROLLO</p>
+          <h1>JavaScript por responsabilidades, no por cantidad de archivos</h1>
+          <p class="article-deck">
+            Un punto de partida para separar navegación, filtros y contacto sin
+            complicar una web pequeña.
+          </p>
+          <p class="article-byline">
+            Luis Alejandro Bravo Bello <span>·</span>
+            <time datetime="2026-10-07">7 de octubre de 2026</time>
+          </p>
+        </header>
+        <section
+          class="container reading-layout"
+          aria-label="Contenido del artículo"
+        >
+          <aside class="article-toc">
+            <nav aria-label="En este artículo">
+              <p class="eyebrow">En este artículo</p>
+              <ol>
+                <li>
+                  <a href="#apartado-1"
+                    >Separar lo que cambia por motivos distintos</a
+                  >
+                </li>
+                <li>
+                  <a href="#apartado-2">Un módulo con una tarea concreta</a>
+                </li>
+                <li><a href="#apartado-3">Un archivo para iniciar</a></li>
+                <li><a href="#apartado-4">Cuándo parar de dividir</a></li>
+              </ol>
+            </nav>
+          </aside>
+          <section class="article-body" aria-label="Explicación y ejemplos">
+            <section id="apartado-1">
+              <h2>Separar lo que cambia por motivos distintos</h2>
+              <p>
+                En un catálogo como Costa Clara, cambiar los filtros no debería
+                obligar a revisar el menú. Separar responsabilidades facilita
+                encontrar dónde hacer un cambio.
+              </p>
+              <p>
+                La cohesión debe ser alta: un módulo reúne tareas relacionadas.
+                El acoplamiento debe ser bajo: necesita conocer pocos detalles
+                de otros módulos. Crear archivos por sí solo no logra ninguna de
+                las dos cosas.
+              </p>
+            </section>
+            <section id="apartado-2">
+              <h2>Un módulo con una tarea concreta</h2>
+              <figure class="code-example">
+                <figcaption>navigation.js</figcaption>
+                <pre tabindex="0"><code>export function initNavigation() {
+  const button = document.querySelector('[data-menu-button]');
+  const menu = document.querySelector('[data-menu]');
+  if (!button || !menu) return;
+
+  button.addEventListener('click', () =&gt; {
+    const open = button.getAttribute('aria-expanded') !== 'true';
+    button.setAttribute('aria-expanded', String(open));
+    menu.hidden = !open;
+  });
+}</code></pre>
+              </figure>
+              <p>
+                El HTML debe incluir esos atributos y un estado inicial
+                coherente. Este ejemplo muestra la división del código; un menú
+                completo también necesita revisar teclado, foco y adaptación al
+                móvil.
+              </p>
+            </section>
+            <section id="apartado-3">
+              <h2>Un archivo para iniciar</h2>
+              <figure class="code-example">
+                <figcaption>app.js</figcaption>
+                <pre
+                  tabindex="0"
+                ><code>import { initNavigation } from './navigation.js';
+import { initFilters } from './filters.js';
+
+initNavigation();
+initFilters();</code></pre>
+              </figure>
+              <figure class="code-example">
+                <figcaption>index.html</figcaption>
+                <pre
+                  tabindex="0"
+                ><code>&lt;script type="module" src="js/app.js"&gt;&lt;/script&gt;</code></pre>
+              </figure>
+              <p>
+                Las funciones se exportan desde su módulo y se importan donde
+                hacen falta. Sirve la web mediante HTTP para cargar los módulos
+                correctamente.
+              </p>
+            </section>
+            <section id="apartado-4">
+              <h2>Cuándo parar de dividir</h2>
+              <p>
+                Un buen límite es una responsabilidad que puedes nombrar:
+                navegación, filtros o contacto. Si cada archivo obliga a saltar
+                a otros cinco para entender unas pocas líneas, la separación
+                necesita revisión.
+              </p>
+              <p>
+                En este portafolio, las tarjetas existen en HTML. El módulo de
+                proyectos solo cambia cuáles se muestran. Así, una mejora
+                interactiva no controla toda la estructura.
+              </p>
+            </section>
+            <aside class="article-sources">
+              <h2>Fuentes y referencias</h2>
+              <ul>
+                <li>
+                  <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules"
+                    >MDN: JavaScript modules
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M7 17 17 7M7 7h10v10"></path></svg
+                  ></a>
+                </li>
+              </ul>
+              <a class="text-link" href="../costa-clara.html"
+                >Ver el proyecto relacionado
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M7 17 17 7M7 7h10v10"></path></svg
+              ></a>
+            </aside>
+          </section>
+        </section>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <section
+        class="container footer-grid"
+        aria-label="Enlaces del portafolio"
+      >
+        <a class="footer-brand" href="../../index.html"
+          >Luis Bravo<span>Desarrollo web con intención.</span></a
+        >
+        <nav aria-label="Redes profesionales">
+          <a href="https://github.com/luisbravobello"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M9 19c-4 1-4-2-6-2m12 5v-4a3.5 3.5 0 0 0-1-3c3-.3 6-1.5 6-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.2-.4-3.6 1.3a12.3 12.3 0 0 0-6 0C6.6 2.2 5.4 2.6 5.4 2.6a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9c0 4.5 3 5.7 6 6a3.5 3.5 0 0 0-1 3v4"
+              ></path>
+            </svg>
+            GitHub</a
+          ><a
+            href="https://www.linkedin.com/in/luis-alejandro-bravo-bello-94606535a/"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+              <path d="M7 10v7m4 0v-7m0 3c0-4 6-4 6 0v4M7 7h.01"></path>
+            </svg>
+            LinkedIn</a
+          ><a href="mailto:luisbravobello@gmail.com"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+              <path d="m3 7 9 6 9-6"></path>
+            </svg>
+            Email</a
+          >
+          <a href="../cv.html">CV</a><a href="../articulos.html">Artículos</a
+          ><a href="../certificados.html">Certificados</a>
+        </nav>
+        <p>© 2026 Luis Alejandro Bravo Bello<br />República Dominicana</p>
+      </section>
+    </footer>
+  </body>
+</html>
