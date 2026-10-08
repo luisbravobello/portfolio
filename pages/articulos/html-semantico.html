@@ -360,9 +360,86 @@
           >
           <a href="../cv.html">CV</a><a href="../articulos.html">Artículos</a
           ><a href="../certificados.html">Certificados</a>
+          <a data-linkedin-qr="" href="../compartir.html" aria-haspopup="dialog"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              aria-hidden="true"
+            >
+              <path
+                d="M3 3h6v6H3Zm12 0h6v6h-6ZM3 15h6v6H3ZM15 15h3v3h-3Zm3 3h3v3h-3ZM12 3v6m0 3H3m9 3v6m3-9h6"
+              ></path>
+            </svg>
+            Mi QR de LinkedIn</a
+          >
         </nav>
         <p>© 2026 Luis Alejandro Bravo Bello<br />República Dominicana</p>
       </section>
     </footer>
+
+    <dialog class="qr-dialog" aria-labelledby="qr-dialog-title">
+      <header>
+        <h2 id="qr-dialog-title">Mi perfil de LinkedIn</h2>
+        <button type="button" data-close-qr="" aria-label="Cerrar">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            aria-hidden="true"
+          >
+            <path d="m6 6 12 12M18 6 6 18"></path>
+          </svg>
+        </button>
+      </header>
+      <section class="qr-card" aria-label="Mi perfil de LinkedIn">
+        <img
+          class="qr-profile-photo"
+          src="../../images/luis-bravo.webp"
+          alt="Luis Alejandro Bravo Bello"
+          width="100"
+          height="100"
+        />
+        <h2>Luis Bravo</h2>
+        <p>Escanea este código para abrir mi perfil de LinkedIn.</p>
+        <img
+          class="qr-image"
+          src="../../images/linkedin-qr.svg"
+          alt="Código QR del perfil de LinkedIn de Luis Alejandro Bravo Bello"
+          width="740"
+          height="740"
+        /><a
+          class="button button-dark"
+          href="https://www.linkedin.com/in/luis-alejandro-bravo-bello-94606535a/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Abrir LinkedIn<span class="visually-hidden">
+            (nueva pestaña)</span
+          ></a
+        >
+        <nav class="qr-downloads" aria-label="Descargar código QR">
+          <a
+            href="../../images/linkedin-qr.png"
+            download="luis-bravo-linkedin-qr.png"
+            >Descargar PNG</a
+          ><a
+            href="../../images/linkedin-qr.svg"
+            download="luis-bravo-linkedin-qr.svg"
+            >Descargar SVG</a
+          >
+        </nav>
+        <button
+          class="qr-copy text-link"
+          data-copy-linkedin=""
+          type="button"
+          hidden=""
+        >
+          Copiar enlace
+        </button>
+        <p class="qr-status" role="status"></p>
+      </section>
+    </dialog>
   </body>
 </html>

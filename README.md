@@ -14,7 +14,7 @@ Los sitios respondieron HTTP 200 al capturar sus portadas. Los repositorios se c
 
 ## Estructura
 
-Ahora incluye **20 páginas HTML**: diez en español y diez en inglés. Cada idioma tiene la portada, tres proyectos, CV, certificados, índice de artículos y tres artículos.
+Ahora incluye **22 páginas HTML**: once en español y once en inglés. Cada idioma tiene la portada, tres proyectos, CV, certificados, índice de artículos, tres artículos y una página para compartir LinkedIn mediante QR.
 
 Los siete documentos de formación se conservan como PDF originales en `downloads/certificados/`. Se distingue certificado de finalización, constancia de participación y certificado de asistencia según el documento. Los títulos ingleses son traducciones descriptivas; los originales siguen en español.
 
@@ -72,7 +72,7 @@ Cuando Cloudflare asigne la URL real, ejecuta desde esta carpeta:
 node scripts/preparar-publicacion.cjs https://tu-proyecto.pages.dev
 ```
 
-Sustituye la URL de ejemplo por la asignada al portafolio. Vuelve a publicar para incluir canonical, hreflang ES/EN y x-default, imágenes sociales por idioma, sitemap de 20 páginas y robots actualizado. El script descubre los HTML y se puede ejecutar de nuevo al cambiar de dominio.
+Sustituye la URL de ejemplo por la asignada al portafolio. Vuelve a publicar para incluir canonical, hreflang ES/EN y x-default, imágenes sociales por idioma, sitemap de 22 páginas y robots actualizado. El script descubre los HTML y se puede ejecutar de nuevo al cambiar de dominio.
 
 Antes de conocer esa URL no se declara un dominio supuesto. La imagen para compartir ya está creada en `images/social-cover.jpg`.
 
@@ -92,6 +92,14 @@ El CV se descarga desde la portada, el menú o su página web. Ambos PDF están 
 El selector con globo usa enlaces reales a la misma página en el otro idioma. JavaScript conserva el fragmento y parámetros de la URL; no traduce contenido en tiempo de ejecución ni redirige automáticamente.
 
 Los artículos explican HTML semántico, módulos JavaScript y estados de consultas con `fetch`. Incluyen ejemplos estáticos, fuentes oficiales y enlace al proyecto relacionado. La consulta de Pikachu usada como ejemplo se verificó en PokéAPI. Los ejemplos no se ejecutan automáticamente en el navegador del visitante.
+
+## QR de LinkedIn
+
+El enlace «Mi QR de LinkedIn» aparece en la presentación, el contacto y el footer. Con JavaScript abre un diálogo nativo que se cierra con Escape; sin JavaScript navega a `pages/compartir.html` o su versión inglesa.
+
+El QR apunta exclusivamente a `https://www.linkedin.com/in/luis-alejandro-bravo-bello-94606535a/`. Los archivos `images/linkedin-qr.svg` y `images/linkedin-qr.png` son locales: no se envía el enlace a un servicio externo para generar la imagen. Incluyen margen blanco y contraste negro/blanco para facilitar la lectura.
+
+La página permite abrir LinkedIn, copiar el enlace y descargar el QR como PNG o SVG. El código se verificó mediante un decodificador en tres tamaños. No cambia según el idioma y no requiere tener publicado el portafolio para poder escanearlo.
 
 ## Referencias
 

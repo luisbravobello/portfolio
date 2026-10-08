@@ -3,20 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Technical articles | Luis Bravo</title>
+    <title>My LinkedIn profile | Luis Bravo</title>
     <meta
       name="description"
-      content="Development notes with examples, decisions and references to keep learning."
+      content="Scan this code to open my LinkedIn profile."
     />
     <meta name="author" content="Luis Alejandro Bravo Bello" />
     <meta name="theme-color" content="#faf9f6" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="Luis Bravo · Portfolio" />
-    <meta property="og:title" content="Technical articles | Luis Bravo" />
+    <meta property="og:title" content="My LinkedIn profile | Luis Bravo" />
     <meta
       property="og:description"
-      content="Development notes with examples, decisions and references to keep learning."
+      content="Scan this code to open my LinkedIn profile."
     />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="../../images/favicon.svg" type="image/svg+xml" />
@@ -43,7 +43,7 @@
       }
     </script>
   </head>
-  <body>
+  <body class="">
     <a class="skip-link" href="#contenido">Skip to content</a>
     <header class="site-header">
       <nav class="container navigation" aria-label="Main navigation">
@@ -92,13 +92,13 @@
           </summary>
           <ul>
             <li>
-              <a href="../../pages/articulos.html" lang="es" hreflang="es"
+              <a href="../../pages/compartir.html" lang="es" hreflang="es"
                 >Español
               </a>
             </li>
             <li>
               <a
-                href="articulos.html"
+                href="compartir.html"
                 lang="en"
                 hreflang="en"
                 aria-current="page"
@@ -119,103 +119,55 @@
       </nav>
     </header>
     <main id="contenido">
-      <section class="case-hero container">
-        <p class="eyebrow">DEVELOPMENT NOTES</p>
-        <h1>Technical articles</h1>
-        <p class="case-intro">
-          Development notes with examples, decisions and references to keep
-          learning.
-        </p>
-      </section>
-      <section
-        class="container article-list section"
-        aria-label="Technical articles"
-      >
-        <section class="articles-grid" aria-label="Technical articles">
-          <article class="article-card" data-reveal="">
-            <p class="article-category">HTML<span>01</span></p>
-            <h3>
-              <a href="articulos/html-semantico.html"
-                >Semantic HTML: structure before style</a
-              >
-            </h3>
-            <p>
-              Choose elements that explain your content and build navigation
-              people can understand.
-            </p>
-            <a class="text-link" href="articulos/html-semantico.html"
-              >Read article
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.6"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M7 17 17 7M7 7h10v10"></path></svg
-              ><span class="visually-hidden"
-                >: Semantic HTML: structure before style</span
-              ></a
+      <section class="container qr-page">
+        <header>
+          <p class="eyebrow">LINKEDIN</p>
+          <h1>My LinkedIn profile</h1>
+          <p>Scan this code to open my LinkedIn profile.</p>
+        </header>
+        <section class="qr-card" aria-label="My LinkedIn profile">
+          <img
+            class="qr-profile-photo"
+            src="../../images/luis-bravo.webp"
+            alt="Luis Alejandro Bravo Bello"
+            width="100"
+            height="100"
+          />
+          <h2>Luis Bravo</h2>
+          <p>Scan this code to open my LinkedIn profile.</p>
+          <img
+            class="qr-image"
+            src="../../images/linkedin-qr.svg"
+            alt="QR code linking to Luis Alejandro Bravo Bello on LinkedIn"
+            width="740"
+            height="740"
+          /><a
+            class="button button-dark"
+            href="https://www.linkedin.com/in/luis-alejandro-bravo-bello-94606535a/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Open LinkedIn<span class="visually-hidden"> (new tab)</span></a
+          >
+          <nav class="qr-downloads" aria-label="Download QR code">
+            <a
+              href="../../images/linkedin-qr.png"
+              download="luis-bravo-linkedin-qr.png"
+              >Download PNG</a
+            ><a
+              href="../../images/linkedin-qr.svg"
+              download="luis-bravo-linkedin-qr.svg"
+              >Download SVG</a
             >
-          </article>
-          <article class="article-card" data-reveal="">
-            <p class="article-category">JavaScript<span>02</span></p>
-            <h3>
-              <a href="articulos/javascript-modular.html"
-                >JavaScript by responsibility, not by file count</a
-              >
-            </h3>
-            <p>
-              Separate navigation, filters and contact behavior without
-              overcomplicating a small website.
-            </p>
-            <a class="text-link" href="articulos/javascript-modular.html"
-              >Read article
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.6"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M7 17 17 7M7 7h10v10"></path></svg
-              ><span class="visually-hidden"
-                >: JavaScript by responsibility, not by file count</span
-              ></a
-            >
-          </article>
-          <article class="article-card" data-reveal="">
-            <p class="article-category">APIs<span>03</span></p>
-            <h3>
-              <a href="articulos/fetch-estados.html"
-                >Consuming an API: loading, data and errors</a
-              >
-            </h3>
-            <p>
-              A fetch request is not finished when JSON arrives: the interface
-              also needs to explain what is happening.
-            </p>
-            <a class="text-link" href="articulos/fetch-estados.html"
-              >Read article
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.6"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M7 17 17 7M7 7h10v10"></path></svg
-              ><span class="visually-hidden"
-                >: Consuming an API: loading, data and errors</span
-              ></a
-            >
-          </article>
+          </nav>
+          <button
+            class="qr-copy text-link"
+            data-copy-linkedin=""
+            type="button"
+            hidden=""
+          >
+            Copy link
+          </button>
+          <p class="qr-status" role="status"></p>
         </section>
       </section>
     </main>
@@ -290,66 +242,5 @@
         <p>© 2026 Luis Alejandro Bravo Bello<br />Dominican Republic</p>
       </section>
     </footer>
-
-    <dialog class="qr-dialog" aria-labelledby="qr-dialog-title">
-      <header>
-        <h2 id="qr-dialog-title">My LinkedIn profile</h2>
-        <button type="button" data-close-qr="" aria-label="Close">
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.7"
-            aria-hidden="true"
-          >
-            <path d="m6 6 12 12M18 6 6 18"></path>
-          </svg>
-        </button>
-      </header>
-      <section class="qr-card" aria-label="My LinkedIn profile">
-        <img
-          class="qr-profile-photo"
-          src="../../images/luis-bravo.webp"
-          alt="Luis Alejandro Bravo Bello"
-          width="100"
-          height="100"
-        />
-        <h2>Luis Bravo</h2>
-        <p>Scan this code to open my LinkedIn profile.</p>
-        <img
-          class="qr-image"
-          src="../../images/linkedin-qr.svg"
-          alt="QR code linking to Luis Alejandro Bravo Bello on LinkedIn"
-          width="740"
-          height="740"
-        /><a
-          class="button button-dark"
-          href="https://www.linkedin.com/in/luis-alejandro-bravo-bello-94606535a/"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Open LinkedIn<span class="visually-hidden"> (new tab)</span></a
-        >
-        <nav class="qr-downloads" aria-label="Download QR code">
-          <a
-            href="../../images/linkedin-qr.png"
-            download="luis-bravo-linkedin-qr.png"
-            >Download PNG</a
-          ><a
-            href="../../images/linkedin-qr.svg"
-            download="luis-bravo-linkedin-qr.svg"
-            >Download SVG</a
-          >
-        </nav>
-        <button
-          class="qr-copy text-link"
-          data-copy-linkedin=""
-          type="button"
-          hidden=""
-        >
-          Copy link
-        </button>
-        <p class="qr-status" role="status"></p>
-      </section>
-    </dialog>
   </body>
 </html>
