@@ -93,6 +93,10 @@ El selector con globo usa enlaces reales a la misma página en el otro idioma. J
 
 Los artículos explican HTML semántico, módulos JavaScript y estados de consultas con `fetch`. Incluyen ejemplos estáticos, fuentes oficiales y enlace al proyecto relacionado. La consulta de Pikachu usada como ejemplo se verificó en PokéAPI. Los ejemplos no se ejecutan automáticamente en el navegador del visitante.
 
+## Animación de entrada
+
+La portada muestra el monograma con un círculo que se dibuja desde arriba durante aproximadamente un segundo. Se muestra una vez por pestaña, se descarta si la persona interactúa y se omite con movimiento reducido. Es decorativa y no representa el progreso de descarga. Sin JavaScript queda oculta y todo el contenido sigue disponible.
+
 ## QR de LinkedIn
 
 El enlace «Mi QR de LinkedIn» aparece en la presentación, el contacto y el footer. Con JavaScript abre un diálogo nativo que se cierra con Escape; sin JavaScript navega a `pages/compartir.html` o su versión inglesa.

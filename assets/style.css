@@ -2041,3 +2041,36 @@ body.cv-page main,
     padding: 24px;
   }
 }
+
+/* 16. Entrada de marca: el trazo comienza a las doce y completa el círculo. */
+.brand-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  background: var(--paper);
+  pointer-events: none;
+  animation: intro-exit .3s ease 1.05s forwards;
+}
+.intro-mark { position: relative; width: 160px; height: 160px; }
+.intro-circle { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); }
+.intro-track { stroke: var(--line); stroke-width: 1.5; }
+.intro-progress {
+  stroke: var(--accent);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-dasharray: 414.69;
+  stroke-dashoffset: 414.69;
+  animation: intro-draw 1s cubic-bezier(.45,0,.2,1) forwards;
+}
+.intro-monogram { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font: 800 4.5rem/1 var(--heading); letter-spacing: -.12em; color: var(--ink); padding-right: 8px; animation: intro-mark-in .45s ease both; }
+.intro-monogram > span { color: var(--accent); }
+.brand-intro > p { color: var(--ink); font-size: .7rem; font-weight: 600; letter-spacing: .22em; animation: intro-mark-in .45s ease .15s both; }
+@keyframes intro-draw { to { stroke-dashoffset: 0; } }
+@keyframes intro-mark-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@keyframes intro-exit { to { opacity: 0; visibility: hidden; } }
+@media (prefers-reduced-motion: reduce) { .brand-intro { display: none !important; } }
