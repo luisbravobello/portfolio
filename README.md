@@ -16,7 +16,7 @@ Los sitios respondieron HTTP 200 al capturar sus portadas. Los repositorios se c
 
 Ahora incluye **22 páginas HTML**: once en español y once en inglés. Cada idioma tiene la portada, tres proyectos, CV, certificados, índice de artículos, tres artículos y una página para compartir LinkedIn mediante QR.
 
-Los siete documentos de formación se conservan como PDF originales en `downloads/certificados/`. Se distingue certificado de finalización, constancia de participación y certificado de asistencia según el documento. Los títulos ingleses son traducciones descriptivas; los originales siguen en español.
+Los ocho documentos de formación se conservan como PDF originales en `downloads/certificados/`. Se distingue certificado de finalización, constancia de participación y certificado de asistencia según el documento. Los títulos ingleses son traducciones descriptivas; los originales siguen en español.
 
 ```text
 portfolio/
@@ -30,7 +30,7 @@ portfolio/
 ├── downloads/
 │   ├── luis-bravo-cv-es.pdf
 │   ├── luis-bravo-cv-en.pdf
-│   └── certificados/           # 7 PDF originales
+│   └── certificados/           # 8 PDF originales
 ├── assets/
 │   └── style.css               # Estilos segmentados por componente
 ├── images/                     # Foto, capturas, favicon y portada social
@@ -108,3 +108,4 @@ La página permite abrir LinkedIn, copiar el enlace y descargar el QR como PNG o
 ## Referencias
 
 Consulta [la documentación y las fuentes](docs/FUENTES.md) para las decisiones de estructura, accesibilidad y SEO.
+

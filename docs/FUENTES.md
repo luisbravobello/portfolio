@@ -38,6 +38,7 @@ Los textos de los artículos son explicaciones propias con ejemplos pequeños. N
 
 ## Certificados
 
-Se revisaron los siete PDF aportados por Luis mediante extracción de texto y visualización. Los logotipos y textos permiten identificar Academia ESET, AWS Entrena y BIG school. Los documentos originales no se modificaron; se copiaron con nombres de archivo legibles. No se atribuye una certificación profesional de AWS a sus constancias de participación.
+Se revisaron los ocho PDF aportados por Luis mediante extracción de texto y visualización. Los logotipos y textos permiten identificar Academia ESET, AWS Entrena y BIG school. Los documentos originales no se modificaron; se copiaron con nombres de archivo legibles. No se atribuye una certificación profesional de AWS a sus constancias de participación.
 
 No se crean códigos de verificación ni enlaces a validadores que no aparezcan confirmados en los documentos. El CV reúne la formación en un resumen, y la web ofrece acceso a los originales.
+
