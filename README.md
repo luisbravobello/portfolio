@@ -87,6 +87,8 @@ Después de publicar, verifica ambos idiomas, las descargas y las portadas socia
 
 ## CV, idiomas y artículos
 
+Actualización del 14/10/2026: los PDF ES/EN y sus páginas incluyen los ocho certificados, incluido «Iniciación al Desarrollo con IA - El Nuevo Programador» (BIG school · mouredev, 08/10/2026). Se conservan foto, dos columnas, fondo blanco, títulos negros y una hoja. Las URL de proyectos y repositorios se muestran como texto y enlaces; las tecnologías se identifican en cada proyecto. Se verificaron extracción Unicode, tildes, contactos, certificados y ausencia de contenido sobrante. El PDF declara su idioma y mantiene fuentes incrustadas. Estas comprobaciones no equivalen a una prueba dentro de un ATS ni garantizan un resultado de selección; algunos analizadores tienen limitaciones con columnas y fotos.
+
 El CV se descarga desde la portada, el menú o su página web. Ambos PDF están organizados en dos columnas y una sola página, con fotografía, texto seleccionable, contacto, formación, experiencia práctica en proyectos, tecnologías, certificados, competencias personales, español nativo y referencias personales. No se han añadido puestos laborales ni fechas de estudios no proporcionadas. La experiencia corresponde a los proyectos del estudiante.
 
 El selector con globo usa enlaces reales a la misma página en el otro idioma. JavaScript conserva el fragmento y parámetros de la URL; no traduce contenido en tiempo de ejecución ni redirige automáticamente.
